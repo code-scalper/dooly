@@ -1,0 +1,357 @@
+:root {
+    --skin: #9dcf5c;
+    --hair: #333;
+    --hair-light: rgba(0,0,0,0.3);
+    --white: #fff;
+    --tongue: #e9c4b4;
+}
+.dooly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+.top {
+    position: relative;
+}
+.hair {
+    position: absolute;
+}
+.hair li {
+    height: 10px;
+    width: 40px;
+    border: 2px solid var(--hair);
+    border-radius: 50%/ 10px 10px 1px 1px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.hair li:nth-child(1){
+    margin: 15px 0 0 -20px;
+    transform: rotate(20deg);
+}
+.hair li:nth-child(2){
+    margin: 0 0 0 -20px;
+}
+.face {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.face-top {
+    width: 150px;
+    height: 160px;
+    background: var(--skin);
+    border-radius: 70% 70% 60% 60%/ 50% 50% 90% 90%;
+    position: relative;
+    z-index: 10;
+}
+.face-bottom {
+    width: 150px;
+    height: 60px;
+    background: var(--skin);
+    border-radius: 50% 50% 45% 45% / 70%;
+    margin-top: -50px;
+    position: relative;
+    z-index:5;
+}
+.eyebrows {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.eyebrows > span {
+    height: 10px;
+    width: 15px;
+    border: 2px solid var(--hair);
+    border-radius: 50%/ 10px 10px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.eyebrows > .left {
+    transform: rotate(-10deg);
+}
+.eyebrows > .right {
+    transform: rotate(10deg);
+}
+.eyes {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.eyes > span {
+    background: var(--white);
+    width: 20px;
+    height: 40px;
+    border-radius: 50% / 50% 50% 40% 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.eyes > .left {
+    transform: rotate(-20deg);
+    margin-left: 10px;
+    justify-content: flex-end;
+}
+.eyes > .right {
+    transform: rotate(20deg);
+    margin-right: 10px;
+}
+.eyes .ball {
+    background: var(--hair);
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+}
+.eyes > .left > .ball {
+    transform: rotate(20deg);
+}
+.eyes > .right > .ball {
+    transform: rotate(-20deg);
+}
+.nose-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 55%; 
+    margin: 0 auto;
+}
+.nose-wrap .wrinkle {
+    height: 3px;
+    width: 15px;
+    border: 1px solid var(--hair);
+    border-radius: 50%/ 3px 3px 0 0;
+     border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 3px;
+}
+.nose-wrap .nose {
+    background: var(--white);
+    width: 30px;
+    height: 25px;
+    border-radius: 50% 40% 35% 45% / 50% 50% 40% 40%;
+}
+.nose-wrap .wrinkle.left {
+    transform: rotate(15deg);
+}
+.nose-wrap .wrinkle.right {
+    transform: rotate(-15deg);
+}
+.face-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.tongue-cover {
+    width: 150px;
+    background: var(--skin);
+    height: 60px;
+    position: absolute;
+    border-radius: 50% 50% 45% 45% / 70%;
+    z-index: 3;
+}
+.tongue {
+    background: var(--tongue);
+    width: 35px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+    border-radius: 0 0 50% 50%;
+    display: flex;
+    justify-content: center;
+    animation: tongueMoves 2s infinite;
+}
+.tongue span {
+    width: 1px;
+    height: 8px;
+    background: var(--hair);
+}
+
+
+.middle {
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.arms {
+    width: 110px;
+    height: 100px;
+    background: var(--skin);
+    border-radius: 50% 50% 30% 30% / 90% 100% 17% 17%;
+    position: relative;
+}
+.stomach {
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+}
+.stomach > .top {
+    width: 50px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.stomach > .top > .wrinkle {
+    height: 10px;
+    width: 25px;
+    border: 1px solid var(--hair-light);
+    border-radius: 50%/ 5px 5px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    top: 37px;
+}
+.stomach > .bottom {
+    width: 90px;
+    height: 75px;
+    background: var(--white);
+    border: 1px solid var(--hair-light);
+    border-radius: 50%;
+    margin-top: -40px;
+}
+.hands {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+.hands .hand {
+    border: 1px solid var(--hair-light);
+    height: 20px;
+    width: 20px;
+    background: var(--white);
+    border-radius: 70% 70% 60% 60% / 70% 70% 80% 80%;
+}
+.fingers {
+    display: flex;
+}
+.finger:nth-child(1){
+    width: 9px;
+    height: 18px;
+    background: var(--white);
+    border: 1px solid var(--hair-light);
+    border-radius: 50%/0 0 10px 10px;
+}
+.finger:nth-child(2){
+    width: 9px;
+    height: 10px;
+    border-radius: 50%/0 0 10px 10px;
+    background: var(--white);
+    border: 1px solid var(--hair-light);
+}
+.hand.left .finger {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+    left: -5px;
+    border-top: none;
+}
+.hand.left .finger:nth-child(2) {
+    transform: rotate(0deg);
+    position: relative;
+    top: 16px;
+    left: -2px;
+}
+.hand.right .finger {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 5px;
+    left: 17px;
+    border-top: none;
+}
+.hand.right .finger:nth-child(2) {
+    transform: rotate(0deg);
+    position: relative;
+    top: 17px;
+    left: -7px;
+}
+.dooly .bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.legs {
+    display: flex;
+    justify-content: center;
+}
+.legs > span {
+    background: var(--skin);
+    height: 50px;
+    width: 33px;
+    border: 1px solid var(--hair-light);
+}
+.feet {
+    display: flex;
+    justify-content : center;
+}
+.feet > span {
+    height: 20px;
+    width: 50px;
+    background: var(--white);
+    border: 1px solid var(--hair-light);
+    position: relative;
+    border-radius: 50% 50% 10px 10px / 90% 90% 5px 5px;
+    top: -20px;
+}
+.feet > .left {
+    left: 5px;
+    z-index: 2;   
+}
+.feet > .right {
+    right: 5px;
+}
+.feet > span > ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+.feet li:nth-child(1){
+    height: 15px;
+    width: 10px;
+    border: 1px solid var(--hair-light);
+    border-radius: 50% / 15px 15px 0 0;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+.feet li:nth-child(2){
+    height: 15px;
+    width: 10px;
+    border: 1px solid var(--hair-light);
+    border-radius: 50% / 15px 15px 0 0;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+@keyframes tongueMoves {
+    0%, 100% {
+        top: 10px;
+    }
+    25%, 75% {
+        top: 20px;
+    }
+}
+
+.dooly:hover {
+    transform: scale(0.2);
+    transition-duration: 3s;
+}
